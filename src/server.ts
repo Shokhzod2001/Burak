@@ -9,7 +9,9 @@ mongoose
     console.log(`Mongodb connection succeed`);
     const PORT = process.env.PORT ?? 3003;
     app.listen(PORT, function () {
-      console.log(`The server running succesfully on port: ${PORT}`);
+      console.log(
+        `The server running succesfully on port: ${PORT}, http://localhost:${PORT}`
+      );
     });
   })
   .catch((err) => {
