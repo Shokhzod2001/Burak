@@ -1,9 +1,18 @@
-// Task H
-function getPositive(array: number[]): string {
-  return array.filter((ele) => ele > 0).join("");
+// Task H2
+function getDigits(word: string): string {
+  return word
+    .split("")
+    .filter((ele) => Number(ele))
+    .join("");
 }
+console.log(getDigits("m14i1t"));
 
-console.log(getPositive([1, -4, 2]));
+// Task H
+// function getPositive(array: number[]): string {
+//   return array.filter((ele) => ele > 0).join("");
+// }
+
+// console.log(getPositive([1, -4, 2]));
 
 // Task G
 // function getHighestIndex(array) {
