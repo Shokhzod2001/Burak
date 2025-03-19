@@ -1,11 +1,22 @@
+/* Project Standards
+  -- Logging standards
+  -- Naming standards:
+  Camel case => variable, function (goHome)
+  Pascal case => Class (MemberService)
+  Snake case =. Css  (button_style)
+  Kebab case => for folders (common-type)
+  -- Error handling:
+  
+ */
+
 // Task H2
-function getDigits(word: string): string {
-  return word
-    .split("")
-    .filter((ele) => Number(ele))
-    .join("");
-}
-console.log(getDigits("m14i1t"));
+// function getDigits(word: string): string {
+//   return word
+//     .split("")
+//     .filter((ele) => Number(ele))
+//     .join("");
+// }
+// console.log(getDigits("m14i1t"));
 
 // Task H
 // function getPositive(array: number[]): string {
