@@ -4,7 +4,7 @@
   Camel case => variable, function (goHome)
   Pascal case => Class (MemberService)
   Snake case =. Css  (button_style)
-  Kebab case => for folders (common-type)
+  Kebab case => for folders and files (common-type)
   -- Error handling:
   
  */
