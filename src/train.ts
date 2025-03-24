@@ -38,6 +38,9 @@ console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
   Snake case =. Css  (button_style)
   Kebab case => for folders and files (common-type)
   -- Error handling:
+
+  Traditional Frontend development => BSSR => EJS
+  Modern FD => SPA => REACT(JSON data qabul qilinadi)
   
  */
 
