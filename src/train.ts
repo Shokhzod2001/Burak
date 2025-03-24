@@ -1,3 +1,35 @@
+// Task I
+
+function majorityElement(arr: number[]): number {
+  arr.sort((a: number, b: number) => a - b);
+
+  let currentCount: number = 1;
+  let maxCount: number = 0;
+  let majorityNum: number = arr[0];
+  let currentNum: number = arr[0];
+
+  for (let i: number = 1; i < arr.length; i++) {
+    if (arr[i] === currentNum) {
+      currentCount++;
+    } else {
+      if (currentCount > maxCount) {
+        maxCount = currentCount;
+        majorityNum = currentNum;
+      }
+      currentNum = arr[i];
+      currentCount = 1;
+    }
+  }
+
+  if (currentCount > maxCount) {
+    majorityNum = currentNum;
+  }
+
+  return majorityNum;
+}
+
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
 /* Project Standards
   -- Logging standards
   -- Naming standards:
