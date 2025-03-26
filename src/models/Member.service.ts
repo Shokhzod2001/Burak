@@ -78,11 +78,11 @@ class MemberService {
       input.memberPassword,
       member.memberPassword
     );
-
-    if (!isMatch)
+    if (!isMatch) {
       throw new Errors(HttpCode.UNAUTHORIZED, Message.WRONG_PASSWORD);
+    }
 
-    return await this.memberModel.findById(member._id).exec();
+    return await this.memberModel.findById(member._id).lean().exec();
   }
 }
 
