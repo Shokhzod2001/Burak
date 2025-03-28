@@ -1,16 +1,17 @@
+// Cookies aspects: join with request and destroy itself
 // Task J
-function findLongestWord(word: string): string {
-  const newWords: string[] = word.split(" ");
-  let longestWord: string = newWords[0];
-  for (let newWord of newWords) {
-    if (newWord.length > longestWord.length) {
-      longestWord = newWord;
-    }
-  }
-  return longestWord;
-}
+// function findLongestWord(word: string): string {
+//   const newWords: string[] = word.split(" ");
+//   let longestWord: string = newWords[0];
+//   for (let newWord of newWords) {
+//     if (newWord.length > longestWord.length) {
+//       longestWord = newWord;
+//     }
+//   }
+//   return longestWord;
+// }
 
-console.log(findLongestWord("I came from Uzbekistan"));
+// console.log(findLongestWord("I came from Uzbekistan"));
 
 // Task I
 
