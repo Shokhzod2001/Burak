@@ -1,3 +1,18 @@
+// Task K
+const vowels: string[] = ["a", "e", "o", "u", "i"];
+
+function countVowels(word: string): number {
+  let vowelCounts: number = 0;
+  const stringArray: string[] = word.split("");
+  for (let i = 0; i < stringArray.length; i++) {
+    if (vowels.includes(stringArray[i])) {
+      vowelCounts++;
+    }
+  }
+  return vowelCounts;
+}
+console.log(countVowels("string"));
+
 // Cookies aspects: join with request and destroy itself
 // Task J
 // function findLongestWord(word: string): string {
