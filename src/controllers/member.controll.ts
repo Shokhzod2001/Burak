@@ -1,4 +1,4 @@
-import { json, Request, Response } from "express";
+import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 import MemberService from "../models/Member.service";
 import { LoginInput, Member, MemberInput } from "../libs/types/member";
@@ -7,7 +7,6 @@ import Errors from "../libs/Errors";
 const memberService = new MemberService();
 
 const memberController: T = {};
-
 memberController.signup = async (req: Request, res: Response) => {
   try {
     console.log("signup");

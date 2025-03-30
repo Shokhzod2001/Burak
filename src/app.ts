@@ -22,6 +22,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan(MORGAN_FORMAT));
 
 /** 2 - SESSIONS **/
+// 1) session added to the req => req.session (creating session)
+// 2) F.cookie.sid => req.session.+member (reading sesions)
 app.use(
   session({
     secret: String(process.env.SESSION_SECRET),

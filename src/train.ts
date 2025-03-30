@@ -1,17 +1,30 @@
-// Task K
-const vowels: string[] = ["a", "e", "o", "u", "i"];
-
-function countVowels(word: string): number {
-  let vowelCounts: number = 0;
-  const stringArray: string[] = word.split("");
-  for (let i = 0; i < stringArray.length; i++) {
-    if (vowels.includes(stringArray[i])) {
-      vowelCounts++;
-    }
+// TASk L
+function reverseSentence(word: string): string {
+  let returnArray: string[] = [];
+  const wordArray: string[] = word.split(" ");
+  for (let item of wordArray) {
+    const reverseItem: string = item.split("").reverse().join("");
+    returnArray.push(reverseItem);
   }
-  return vowelCounts;
+  let returnString: string = returnArray.join(" ");
+  return returnString;
 }
-console.log(countVowels("string"));
+console.log(reverseSentence("we like coding!"));
+
+// Task K
+// const vowels: string[] = ["a", "e", "o", "u", "i"];
+
+// function countVowels(word: string): number {
+//   let vowelCounts: number = 0;
+//   const stringArray: string[] = word.split("");
+//   for (let i = 0; i < stringArray.length; i++) {
+//     if (vowels.includes(stringArray[i])) {
+//       vowelCounts++;
+//     }
+//   }
+//   return vowelCounts;
+// }
+// console.log(countVowels("string"));
 
 // Cookies aspects: join with request and destroy itself
 // Task J
