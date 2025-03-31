@@ -11,6 +11,13 @@ function reverseSentence(word: string): string {
 }
 console.log(reverseSentence("we like coding!"));
 
+/* Validation:
+1=> Frontend Validation
+2=> Pipe Validation
+3=> Backend Validation
+4=> Database Validation
+*/
+
 // Task K
 // const vowels: string[] = ["a", "e", "o", "u", "i"];
 
