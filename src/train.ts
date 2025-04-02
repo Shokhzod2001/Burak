@@ -1,15 +1,43 @@
-// TASk L
-function reverseSentence(word: string): string {
-  let returnArray: string[] = [];
-  const wordArray: string[] = word.split(" ");
-  for (let item of wordArray) {
-    const reverseItem: string = item.split("").reverse().join("");
-    returnArray.push(reverseItem);
-  }
-  let returnString: string = returnArray.join(" ");
-  return returnString;
+// TASK M
+// First way
+function getSquareNumbers(numArray: number[]) {
+  const resultArray = numArray.map((num) => {
+    return {
+      number: num,
+      square: num * num,
+    };
+  });
+  return resultArray;
 }
-console.log(reverseSentence("we like coding!"));
+
+// Second way
+function getSquareNumbers2(numArray: number[]) {
+  const resultArray = [];
+  for (let i = 0; i < numArray.length; i++) {
+    const resultArrayObj = {
+      number: numArray[i],
+      square: numArray[i] * numArray[i],
+    };
+    resultArray.push(resultArrayObj);
+  }
+  return resultArray;
+}
+console.log(getSquareNumbers([1, 2, 3]));
+console.log("====================================");
+console.log(getSquareNumbers2([1, 2, 3]));
+
+// TASK L
+// function reverseSentence(word: string): string {
+//   let returnArray: string[] = [];
+//   const wordArray: string[] = word.split(" ");
+//   for (let item of wordArray) {
+//     const reverseItem: string = item.split("").reverse().join("");
+//     returnArray.push(reverseItem);
+//   }
+//   let returnString: string = returnArray.join(" ");
+//   return returnString;
+// }
+// console.log(reverseSentence("we like coding!"));
 
 /* Validation:
 1=> Frontend Validation
