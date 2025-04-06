@@ -1,30 +1,42 @@
+// Task N
+function palindromCheck(word: string): boolean {
+  const reversedWord: string = word.split("").reverse().join("");
+  if (reversedWord === word) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(palindromCheck("dad"));
+console.log(palindromCheck("son"));
+
 // TASK M
 // First way
-function getSquareNumbers(numArray: number[]) {
-  const resultArray = numArray.map((num) => {
-    return {
-      number: num,
-      square: num * num,
-    };
-  });
-  return resultArray;
-}
+// function getSquareNumbers(numArray: number[]) {
+//   const resultArray = numArray.map((num) => {
+//     return {
+//       number: num,
+//       square: num * num,
+//     };
+//   });
+//   return resultArray;
+// }
 
-// Second way
-function getSquareNumbers2(numArray: number[]) {
-  const resultArray = [];
-  for (let i = 0; i < numArray.length; i++) {
-    const resultArrayObj = {
-      number: numArray[i],
-      square: numArray[i] * numArray[i],
-    };
-    resultArray.push(resultArrayObj);
-  }
-  return resultArray;
-}
-console.log(getSquareNumbers([1, 2, 3]));
-console.log("====================================");
-console.log(getSquareNumbers2([1, 2, 3]));
+// // Second way
+// function getSquareNumbers2(numArray: number[]) {
+//   const resultArray = [];
+//   for (let i = 0; i < numArray.length; i++) {
+//     const resultArrayObj = {
+//       number: numArray[i],
+//       square: numArray[i] * numArray[i],
+//     };
+//     resultArray.push(resultArrayObj);
+//   }
+//   return resultArray;
+// }
+// console.log(getSquareNumbers([1, 2, 3]));
+// console.log("====================================");
+// console.log(getSquareNumbers2([1, 2, 3]));
 
 // TASK L
 // function reverseSentence(word: string): string {
