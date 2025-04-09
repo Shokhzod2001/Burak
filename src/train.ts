@@ -1,14 +1,25 @@
-// Task N
-function palindromCheck(word: string): boolean {
-  const reversedWord: string = word.split("").reverse().join("");
-  if (reversedWord === word) {
-    return true;
-  } else {
-    return false;
+// Task O
+function calculateSumOfNumbers(array: any[]): Number {
+  let result: number = 0;
+  for (let ele of array) {
+    if (typeof ele === "number") {
+      result += ele;
+    }
   }
+  return result;
 }
-console.log(palindromCheck("dad"));
-console.log(palindromCheck("son"));
+console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+// Task N
+// function palindromCheck(word: string): boolean {
+//   const reversedWord: string = word.split("").reverse().join("");
+//   if (reversedWord === word) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(palindromCheck("dad"));
+// console.log(palindromCheck("son"));
 
 // TASK M
 // First way
