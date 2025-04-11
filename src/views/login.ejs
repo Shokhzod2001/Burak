@@ -3,7 +3,12 @@
 <link rel="stylesheet" type="text/css" href="/css/login.css" />
 
 <body>
-  <form class="login-container" action="/admin/login" METHOD="POST">
+  <form
+    onsubmit="return validateSignupForm()"
+    class="login-container"
+    action="/admin/login"
+    METHOD="POST"
+  >
     <div class="login-frame">
       <div class="login-top">
         <span>Enter</span>
@@ -22,7 +27,6 @@
             class="member-nick"
             placeholder="Username"
             value=""
-            required
           />
         </div>
         <div class="login-input-container">
@@ -33,13 +37,14 @@
             class="member-password"
             placeholder="Password"
             value=""
-            required
           />
         </div>
       </div>
       <button class="login-btn btn" name="login" type="submit">Login</button>
     </div>
   </form>
+
+  <script type="text/javascript" src="/js/login.js"></script>
 </body>
 
 <%- include('includes/footer') %>

@@ -7,7 +7,7 @@ $(function () {
   fileTarget.on("change", function () {
     if (window.FileReader) {
       const uploadFile = $(this)[0].files[0];
-      console.log("uploadFile:", uploadFile);
+      console.log("uploadfile:", uploadFile);
       const fileType = uploadFile["type"];
       const validImageType = ["image/jpg", "image/jpeg", "image/png"];
       if (!validImageType.includes(fileType)) {
@@ -47,9 +47,10 @@ function validateSignupForm() {
     return false;
   }
 
-  const memberImage = $(".member-image").get(0).files[0]
+  const memberImage = $(".member-image").get(0)?.files[0]?.name
     ? $(".member-image").get(0).files[0].name
     : null;
+  console.log(memberImage);
   if (!memberImage) {
     alert("Please insert restaurant image!");
     return false;

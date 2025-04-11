@@ -1,14 +1,22 @@
-// Task O
-function calculateSumOfNumbers(array: any[]): Number {
-  let result: number = 0;
-  for (let ele of array) {
-    if (typeof ele === "number") {
-      result += ele;
-    }
-  }
-  return result;
+// Task P
+import { T } from "./libs/types/common";
+function objectToArray(input: T): any[] {
+  let keys: string[] = Object.keys(input);
+  return keys.map((key) => [key, input[key]]);
 }
-console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+
+console.log(objectToArray({ a: 10, b: 20 }));
+// Task O
+// function calculateSumOfNumbers(array: any[]): Number {
+//   let result: number = 0;
+//   for (let ele of array) {
+//     if (typeof ele === "number") {
+//       result += ele;
+//     }
+//   }
+//   return result;
+// }
+// console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
 // Task N
 // function palindromCheck(word: string): boolean {
 //   const reversedWord: string = word.split("").reverse().join("");
