@@ -1,11 +1,20 @@
-// Task P
+// Task Q
 import { T } from "./libs/types/common";
-function objectToArray(input: T): any[] {
-  let keys: string[] = Object.keys(input);
-  return keys.map((key) => [key, input[key]]);
+function hasProperty(object: T, string: string): boolean {
+  const keys: string[] = Object.keys(object);
+  return keys.includes(string);
 }
 
-console.log(objectToArray({ a: 10, b: 20 }));
+console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
+// Task P
+// import { T } from "./libs/types/common";
+// function objectToArray(input: T): any[] {
+//   let keys: string[] = Object.keys(input);
+//   return keys.map((key) => [key, input[key]]);
+// }
+
+// console.log(objectToArray({ a: 10, b: 20 }));
 // Task O
 // function calculateSumOfNumbers(array: any[]): Number {
 //   let result: number = 0;
