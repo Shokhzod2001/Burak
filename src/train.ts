@@ -1,12 +1,25 @@
-// Task Q
-import { T } from "./libs/types/common";
-function hasProperty(object: T, string: string): boolean {
-  const keys: string[] = Object.keys(object);
-  return keys.includes(string);
+// Task R
+function calculate(input: string): number {
+  const parts = input.split(" + ");
+  let sum = parseInt(parts[0]);
+
+  for (let i = 1; i < parts.length; i++) {
+    sum += parseInt(parts[i]);
+  }
+  return sum;
 }
 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
-console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
+console.log(calculate("1 + 3"));
+
+// Task Q
+// import { T } from "./libs/types/common";
+// function hasProperty(object: T, string: string): boolean {
+//   const keys: string[] = Object.keys(object);
+//   return keys.includes(string);
+// }
+
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "year"));
 // Task P
 // import { T } from "./libs/types/common";
 // function objectToArray(input: T): any[] {
