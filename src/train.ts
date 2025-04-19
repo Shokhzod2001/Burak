@@ -1,15 +1,27 @@
-// Task R
-function calculate(input: string): number {
-  const parts = input.split(" + ");
-  let sum = parseInt(parts[0]);
+// Task S
+function missingNumber(input: number[]): number {
+  input.sort((a, b) => a - b);
 
-  for (let i = 1; i < parts.length; i++) {
-    sum += parseInt(parts[i]);
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] !== i) {
+      return i;
+    }
   }
-  return sum;
+  return input.length;
 }
+console.log(missingNumber([3, 0, 1]));
+// Task R
+// function calculate(input: string): number {
+//   const parts = input.split(" + ");
+//   let sum = parseInt(parts[0]);
 
-console.log(calculate("1 + 3"));
+//   for (let i = 1; i < parts.length; i++) {
+//     sum += parseInt(parts[i]);
+//   }
+//   return sum;
+// }
+
+// console.log(calculate("1 + 3"));
 
 // Task Q
 // import { T } from "./libs/types/common";
