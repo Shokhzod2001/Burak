@@ -1,15 +1,23 @@
-// Task S
-function missingNumber(input: number[]): number {
-  input.sort((a, b) => a - b);
-
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] !== i) {
-      return i;
-    }
-  }
-  return input.length;
+// Task T
+function mergeSortedArrays(array1: number[], array2: number[]): number[] {
+  const joinedArray: number[] = array1.concat(array2);
+  return joinedArray.sort((a, b) => a - b);
 }
-console.log(missingNumber([3, 0, 1]));
+
+console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
+
+// Task S
+// function missingNumber(input: number[]): number {
+//   input.sort((a, b) => a - b);
+
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i] !== i) {
+//       return i;
+//     }
+//   }
+//   return input.length;
+// }
+// console.log(missingNumber([3, 0, 1]));
 // Task R
 // function calculate(input: string): number {
 //   const parts = input.split(" + ");
