@@ -1,10 +1,21 @@
-// Task T
-function mergeSortedArrays(array1: number[], array2: number[]): number[] {
-  const joinedArray: number[] = array1.concat(array2);
-  return joinedArray.sort((a, b) => a - b);
+// TASK U
+function sumOdds(input: number) {
+  const numArray = [];
+  for (let i = 0; i < input; i++) {
+    numArray.push(i);
+  }
+  return numArray.filter((num) => num! % 2).length;
 }
+console.log(sumOdds(9));
+console.log(sumOdds(11));
 
-console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
+// Task T
+// function mergeSortedArrays(array1: number[], array2: number[]): number[] {
+//   const joinedArray: number[] = array1.concat(array2);
+//   return joinedArray.sort((a, b) => a - b);
+// }
+
+// console.log(mergeSortedArrays([0, 3, 4, 31], [4, 6, 30]));
 
 // Task S
 // function missingNumber(input: number[]): number {
