@@ -1,13 +1,30 @@
-// TASK U
-function sumOdds(input: number) {
-  const numArray = [];
-  for (let i = 0; i < input; i++) {
-    numArray.push(i);
+// TASK V
+import { T } from "./libs/types/common";
+
+function countChars(input: string): T {
+  const charsObj: T = {};
+  for (let i = 0; i < input.length; i++) {
+    const char = input[i];
+    if (charsObj[char]) {
+      charsObj[char]++;
+    } else {
+      charsObj[char] = 1;
+    }
   }
-  return numArray.filter((num) => num! % 2).length;
+
+  return charsObj;
 }
-console.log(sumOdds(9));
-console.log(sumOdds(11));
+console.log(countChars("hello"));
+// TASK U
+// function sumOdds(input: number) {
+//   const numArray = [];
+//   for (let i = 0; i < input; i++) {
+//     numArray.push(i);
+//   }
+//   return numArray.filter((num) => num! % 2).length;
+// }
+// console.log(sumOdds(9));
+// console.log(sumOdds(11));
 
 // Task T
 // function mergeSortedArrays(array1: number[], array2: number[]): number[] {
