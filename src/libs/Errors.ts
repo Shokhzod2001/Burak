@@ -14,7 +14,9 @@ export enum Message {
   NO_DATA_FOUND = "No data is found",
   CREATE_FAILED = "Create is failed",
   UPDATED_FAILED = "Update is failed!",
+
   USED_NICK_PHONE = "You are inserting already used nick or phone!",
+  TOKEN_CREATION_FAILED = "Token creation error!",
   NO_MEMBER_NICK = "No member with that member nick!",
   BLOCKED_USER = "You have been blocked, please contact the restaurant!",
   WRONG_PASSWORD = "Wrong password, please try again!",
