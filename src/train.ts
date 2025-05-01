@@ -1,20 +1,26 @@
-// TASK V
-import { T } from "./libs/types/common";
-
-function countChars(input: string): T {
-  const charsObj: T = {};
-  for (let i = 0; i < input.length; i++) {
-    const char = input[i];
-    if (charsObj[char]) {
-      charsObj[char]++;
-    } else {
-      charsObj[char] = 1;
-    }
-  }
-
-  return charsObj;
+// TASK W
+function chunkArray(arr: number[], num: number) {
+  const resultArr = [];
 }
-console.log(countChars("hello"));
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+
+// TASK V
+// import { T } from "./libs/types/common";
+
+// function countChars(input: string): T {
+//   const charsObj: T = {};
+//   for (let i = 0; i < input.length; i++) {
+//     const char = input[i];
+//     if (charsObj[char]) {
+//       charsObj[char]++;
+//     } else {
+//       charsObj[char] = 1;
+//     }
+//   }
+
+//   return charsObj;
+// }
+// console.log(countChars("hello"));
 // TASK U
 // function sumOdds(input: number) {
 //   const numArray = [];
