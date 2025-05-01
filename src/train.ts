@@ -1,6 +1,11 @@
 // TASK W
 function chunkArray(arr: number[], num: number) {
   const resultArr = [];
+  for (let i = 0; i < arr.length; i += num) {
+    const chunk = arr.slice(i, i + num);
+    resultArr.push(chunk);
+  }
+  return resultArr;
 }
 console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
 
