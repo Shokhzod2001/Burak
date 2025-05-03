@@ -1,13 +1,41 @@
-// TASK W
-function chunkArray(arr: number[], num: number) {
-  const resultArr = [];
-  for (let i = 0; i < arr.length; i += num) {
-    const chunk = arr.slice(i, i + num);
-    resultArr.push(chunk);
+// TASK X
+import { T } from "./libs/types/common";
+function countOccurrences(obj: T, str: string): number {
+  if (typeof obj !== "object" || obj === null) {
+    return 0;
   }
-  return resultArr;
+
+  let count = 0;
+
+  for (const prop in obj) {
+    if (prop === str) {
+      count++;
+    }
+
+    if (typeof obj[prop] === "object" && obj[prop] !== null) {
+      count += countOccurrences(obj[prop], str);
+    }
+  }
+
+  return count;
 }
-console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+
+console.log(
+  countOccurrences(
+    { model: "Bugatti", steer: { model: "HANKOOK", size: 30 } },
+    "model"
+  )
+);
+// TASK W
+// function chunkArray(arr: number[], num: number) {
+//   const resultArr = [];
+//   for (let i = 0; i < arr.length; i += num) {
+//     const chunk = arr.slice(i, i + num);
+//     resultArr.push(chunk);
+//   }
+//   return resultArr;
+// }
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
 
 // TASK V
 // import { T } from "./libs/types/common";
