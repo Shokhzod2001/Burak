@@ -34,7 +34,7 @@ class AuthService {
       token,
       this.secretToken
     )) as Member;
-    console.log(`Auth memberNick : ${result.memberNick}`);
+
     return result;
   }
 }
