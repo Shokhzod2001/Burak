@@ -10,10 +10,9 @@ import { shapeIntoMongooseObjectId } from "../libs/config";
 import { T } from "../libs/types/common";
 import { ProductStatus } from "../libs/enums/product.enum";
 import { ObjectId } from "mongoose";
-import ViewModel from "../schema/View.model";
-import ViewService from "./view.service";
 import { ViewInput } from "../libs/types/view";
 import { ViewGroup } from "../libs/enums/view.enum";
+import ViewService from "./View.service";
 
 class ProductService {
   private readonly productModel;

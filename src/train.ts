@@ -1,31 +1,37 @@
-// TASK X
-import { T } from "./libs/types/common";
-function countOccurrences(obj: T, str: string): number {
-  if (typeof obj !== "object" || obj === null) {
-    return 0;
-  }
-
-  let count = 0;
-
-  for (const prop in obj) {
-    if (prop === str) {
-      count++;
-    }
-
-    if (typeof obj[prop] === "object" && obj[prop] !== null) {
-      count += countOccurrences(obj[prop], str);
-    }
-  }
-
-  return count;
+// TASK Y
+function findIntersection(arr1: number[], arr2: number[]): number[] {
+  return arr1.filter((ele) => arr2.includes(ele));
 }
+console.log(findIntersection([1, 2, 3], [3, 2, 0]));
 
-console.log(
-  countOccurrences(
-    { model: "Bugatti", steer: { model: "HANKOOK", size: 30 } },
-    "model"
-  )
-);
+// TASK X
+// import { T } from "./libs/types/common";
+// function countOccurrences(obj: T, str: string): number {
+//   if (typeof obj !== "object" || obj === null) {
+//     return 0;
+//   }
+
+//   let count = 0;
+
+//   for (const prop in obj) {
+//     if (prop === str) {
+//       count++;
+//     }
+
+//     if (typeof obj[prop] === "object" && obj[prop] !== null) {
+//       count += countOccurrences(obj[prop], str);
+//     }
+//   }
+
+//   return count;
+// }
+
+// console.log(
+//   countOccurrences(
+//     { model: "Bugatti", steer: { model: "HANKOOK", size: 30 } },
+//     "model"
+//   )
+// );
 // TASK W
 // function chunkArray(arr: number[], num: number) {
 //   const resultArr = [];
