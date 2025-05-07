@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { shapeIntoMongooseObjectId } from "../libs/config";
 import Errors, { HttpCode, Message } from "../libs/Errors";
 import { T } from "../libs/types/common";
 import ProductService from "../models/Product.service";
@@ -40,7 +41,8 @@ productController.getProduct = async (req: ExtendedRequest, res: Response) => {
   try {
     console.log("getProduct");
     const { id } = req.params;
-    const memberId = req.member?._id ?? null,
+    const reqmemberId = req.member?._id ?? null,
+      memberId = shapeIntoMongooseObjectId(reqmemberId),
       result = await productService.getProduct(memberId, id);
 
     res.status(HttpCode.OK).json(result);

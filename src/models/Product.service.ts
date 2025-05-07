@@ -41,7 +41,7 @@ class ProductService {
       .aggregate([
         { $match: match }, //finding
         { $sort: sort },
-        { $skip: (inquiry.page * 1 - 1) * inquiry.limit },
+        { $skip: (inquiry.page * 1 - 1) * inquiry.limit * 1 },
         { $limit: inquiry.limit * 1 },
       ])
       .exec();
