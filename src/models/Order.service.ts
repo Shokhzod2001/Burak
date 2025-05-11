@@ -96,6 +96,14 @@ class OrderService {
             as: "productData",
           },
         },
+        {
+          $lookup: {
+            from: "members",
+            localField: "memberId",
+            foreignField: "_id",
+            as: "memberData",
+          },
+        },
       ])
       .exec();
 

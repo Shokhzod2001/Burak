@@ -1,10 +1,19 @@
-// TASK Z
-function sumEvens(num: number[]): number {
-  const sum: number[] = num.filter((ele) => ele % 2 === 0);
-  return sum.reduce((total, current) => total + current, 0);
+// TASK ZB
+function randomBetween(num1: number, num2: number): number {
+  if (num1 > num2) {
+    [num1, num2] = [num2, num1];
+  }
+
+  return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
 }
-console.log(sumEvens([1, 2, 3]));
-console.log(sumEvens([1, 2, 3, 2]));
+console.log(randomBetween(30, 50));
+// TASK Z
+// function sumEvens(num: number[]): number {
+//   const sum: number[] = num.filter((ele) => ele % 2 === 0);
+//   return sum.reduce((total, current) => total + current, 0);
+// }
+// console.log(sumEvens([1, 2, 3]));
+// console.log(sumEvens([1, 2, 3, 2]));
 // TASK Y
 // function findIntersection(arr1: number[], arr2: number[]): number[] {
 //   return arr1.filter((ele) => arr2.includes(ele));
