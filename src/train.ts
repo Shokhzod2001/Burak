@@ -1,10 +1,26 @@
-// TASK ZC
-function celsiusToFahrenheit(celsius: number): number {
-  return (celsius * 9) / 5 + 32;
+// TASK ZD
+function changeNumberInArray(
+  num1: number,
+  arr: number[],
+  num2: number
+): number[] {
+  const result = [...arr];
+
+  if (num1 >= 0 && num1 < arr.length) {
+    result[num1] = num2;
+  }
+
+  return result;
 }
 
-console.log(celsiusToFahrenheit(0));
-console.log(celsiusToFahrenheit(10));
+console.log(changeNumberInArray(1, [1, 3, 7, 2], 2));
+// TASK ZC
+// function celsiusToFahrenheit(celsius: number): number {
+//   return (celsius * 9) / 5 + 32;
+// }
+
+// console.log(celsiusToFahrenheit(0));
+// console.log(celsiusToFahrenheit(10));
 
 // TASK ZB
 // function randomBetween(num1: number, num2: number): number {
