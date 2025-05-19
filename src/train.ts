@@ -1,19 +1,28 @@
-// TASK ZD
-function changeNumberInArray(
-  num1: number,
-  arr: number[],
-  num2: number
-): number[] {
-  const result = [...arr];
-
-  if (num1 >= 0 && num1 < arr.length) {
-    result[num1] = num2;
-  }
-
-  return result;
+// TASK ZE
+function removeDuplicate(input: string): string {
+  return input
+    .split("")
+    .filter((char, index) => input.indexOf(char) === index)
+    .join("");
 }
+console.log(removeDuplicate("stringg"));
 
-console.log(changeNumberInArray(1, [1, 3, 7, 2], 2));
+// TASK ZD
+// function changeNumberInArray(
+//   num1: number,
+//   arr: number[],
+//   num2: number
+// ): number[] {
+//   const result = [...arr];
+
+//   if (num1 >= 0 && num1 < arr.length) {
+//     result[num1] = num2;
+//   }
+
+//   return result;
+// }
+
+// console.log(changeNumberInArray(1, [1, 3, 7, 2], 2));
 // TASK ZC
 // function celsiusToFahrenheit(celsius: number): number {
 //   return (celsius * 9) / 5 + 32;
