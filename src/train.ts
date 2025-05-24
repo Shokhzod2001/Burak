@@ -1,11 +1,26 @@
-// TASK ZE
-function removeDuplicate(input: string): string {
-  return input
-    .split("")
-    .filter((char, index) => input.indexOf(char) === index)
-    .join("");
+// TASK ZF
+function capitalizeWords(str: string): string {
+  if (!str) return "";
+  return str
+    .split(" ")
+    .map((word) =>
+      word.length > 2
+        ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+        : word
+    )
+    .join(" ");
 }
-console.log(removeDuplicate("stringg"));
+
+console.log(capitalizeWords("name should be a string"));
+
+// TASK ZE
+// function removeDuplicate(input: string): string {
+//   return input
+//     .split("")
+//     .filter((char, index) => input.indexOf(char) === index)
+//     .join("");
+// }
+// console.log(removeDuplicate("stringg"));
 
 // TASK ZD
 // function changeNumberInArray(
