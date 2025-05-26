@@ -10,7 +10,7 @@ export interface Member {
   memberNick: string;
   memberPhone: string;
   memberPassword?: string;
-  memberAdress?: string;
+  memberAddress?: string;
   memberDesc?: string;
   memberImage?: string;
   memberPoints: number;
@@ -24,7 +24,7 @@ export interface MemberInput {
   memberNick: string;
   memberPhone: string;
   memberPassword: string;
-  memberAdress?: string;
+  memberAddress?: string;
   memberDesc?: string;
   memberImage?: string;
   memberPoints?: number;
@@ -41,7 +41,7 @@ export interface MemberUpdateInput {
   memberNick?: string;
   memberPhone?: string;
   memberPassword?: string;
-  memberAdress?: string;
+  memberAddress?: string;
   memberDesc?: string;
   memberImage?: string;
 }

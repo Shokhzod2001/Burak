@@ -1,17 +1,23 @@
-// TASK ZF
-function capitalizeWords(str: string): string {
+// TASK ZG
+function convertToSnakeCase(str: string): string {
   if (!str) return "";
-  return str
-    .split(" ")
-    .map((word) =>
-      word.length > 2
-        ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-        : word
-    )
-    .join(" ");
+  return str.split(" ").join("_");
 }
+console.log(convertToSnakeCase("name should be a string"));
+// TASK ZF
+// function capitalizeWords(str: string): string {
+//   if (!str) return "";
+//   return str
+//     .split(" ")
+//     .map((word) =>
+//       word.length > 2
+//         ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+//         : word
+//     )
+//     .join(" ");
+// }
 
-console.log(capitalizeWords("name should be a string"));
+// console.log(capitalizeWords("name should be a string"));
 
 // TASK ZE
 // function removeDuplicate(input: string): string {
