@@ -1,19 +1,30 @@
-// TASK ZH
-function findDisappearedNumbers(arr: number[]): number[] {
-  if (arr.length === 0) return [];
-  const sortedArr: number[] = arr.sort((a, b) => a - b);
-  const maxlength: number = sortedArr.length;
-  const minNum: number = sortedArr[0];
-  const maxNum: number = sortedArr[maxlength - 1];
-  const missingNum: number[] = [];
-  for (let i = minNum; i <= maxNum; i++) {
-    if (!arr.includes(i)) {
-      missingNum.push(i);
-    }
-  }
-  return missingNum;
+// TASK ZI
+async function delayHelloWorld(text: string): Promise<string> {
+  await new Promise<void>((resolve) => setTimeout(resolve, 3000));
+  return text;
 }
-console.log(findDisappearedNumbers([1, 3, 4, 7]));
+
+async function answer() {
+  const result = await delayHelloWorld("Hello World!");
+  console.log(result);
+}
+answer();
+// TASK ZH
+// function findDisappearedNumbers(arr: number[]): number[] {
+//   if (arr.length === 0) return [];
+//   const sortedArr: number[] = arr.sort((a, b) => a - b);
+//   const maxlength: number = sortedArr.length;
+//   const minNum: number = sortedArr[0];
+//   const maxNum: number = sortedArr[maxlength - 1];
+//   const missingNum: number[] = [];
+//   for (let i = minNum; i <= maxNum; i++) {
+//     if (!arr.includes(i)) {
+//       missingNum.push(i);
+//     }
+//   }
+//   return missingNum;
+// }
+// console.log(findDisappearedNumbers([1, 3, 4, 7]));
 // TASK ZG
 // function convertToSnakeCase(str: string): string {
 //   if (!str) return "";
