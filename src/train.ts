@@ -1,14 +1,21 @@
-// TASK ZI
-async function delayHelloWorld(text: string): Promise<string> {
-  await new Promise<void>((resolve) => setTimeout(resolve, 3000));
-  return text;
+// TASK ZJ
+function reduceNestedArray(nestedarr: any[]): number {
+  const arr: number[] = nestedarr.flat(Infinity);
+  return arr.reduce((total, value) => total + value, 0);
 }
+console.log(reduceNestedArray([1, [1, 2, [4]]]));
 
-async function answer() {
-  const result = await delayHelloWorld("Hello World!");
-  console.log(result);
-}
-answer();
+// TASK ZI
+// async function delayHelloWorld(text: string): Promise<string> {
+//   await new Promise<void>((resolve) => setTimeout(resolve, 3000));
+//   return text;
+// }
+
+// async function answer() {
+//   const result = await delayHelloWorld("Hello World!");
+//   console.log(result);
+// }
+// answer();
 // TASK ZH
 // function findDisappearedNumbers(arr: number[]): number[] {
 //   if (arr.length === 0) return [];
